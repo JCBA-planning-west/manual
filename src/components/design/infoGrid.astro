@@ -1,0 +1,35 @@
+---
+---
+<div class="info-grid">
+  <slot />
+</div>
+
+<style is:global>
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.8rem;
+    margin: 1rem 0;
+  }
+  .info-grid-item {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .info-grid-item::before {
+    content: "✓";
+    color: var(--accent-color);
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  @media (max-width: 768px) {
+    .info-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

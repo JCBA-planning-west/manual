@@ -1,0 +1,103 @@
+---
+interface Props {
+  title?: string;
+}
+const { title } = Astro.props;
+---
+<div class="rule-card">
+  {title && (
+    <div class="rule-title">
+      <span>{title}</span>
+    </div>
+  )}
+  <slot />
+</div>
+
+<style is:global>
+  .rule-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+  }
+  .rule-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: var(--primary-color, #0f2350);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 12px;
+  }
+  .rule-list {
+    counter-reset: item;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .rule-list li {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px dashed #eee;
+    gap: 20px;
+    position: relative;
+    padding-left: 35px;
+  }
+  .rule-list li:last-child {
+    border-bottom: none;
+  }
+  .rule-list li::before {
+    content: counter(item);
+    counter-increment: item;
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 24px;
+    height: 24px;
+    background: #1a73e8;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .rule-condition {
+    display: block;
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 2px;
+  }
+  .rule-action-group {
+    flex: 1;
+  }
+  .rule-action {
+    display: block;
+    font-weight: bold;
+    font-size: 1.05rem;
+    color: #333;
+    margin-bottom: 4px;
+  }
+  @media (max-width: 768px) {
+    .rule-list li {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .rule-condition {
+      width: 100%;
+      color: #1a73e8;
+    }
+    .rule-action-group {
+      min-width: 100%;
+    }
+  }
+</style>

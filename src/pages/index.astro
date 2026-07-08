@@ -1,11 +1,964 @@
 ---
-import Welcome from '../components/Welcome.astro';
+// src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="運営マニュアル">
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar">
+    <h2>📑 目次</h2>
+    <a href="#section-0" class="nav-link">📆 年間スケジュール</a>
+    <a href="#section-1" class="nav-link">1. 企画</a>
+    <a href="#sub-gym-secure" class="nav-sub-link">🏟 体育館の確保と選び方</a>
+    <a href="#sub-form-system" class="nav-sub-link">📋 書類作成（フォーム/振込/OC）</a>
+    <a href="#section-2" class="nav-link">2. メール対応</a>
+    <a href="#section-3" class="nav-link">3. 撮影機材</a>
+    <a href="#section-4" class="nav-link">4. 他委員会連携</a>
+    <hr class="nav-divider">
+    <a href="#section-5" class="nav-link">5. ルール・規定・図面</a>
+    <a href="#sub-rule-detail" class="nav-sub-link">📏 大会規定</a>
+    <a href="#sub-court-diagram" class="nav-sub-link">📐 コート図作成</a>
+    <a href="#section-6" class="nav-link">6. 当日運営・備品管理</a>
+    <a href="#sub-timeschedule" class="nav-sub-link">⏱ タイムスケジュール</a>
+    <a href="#sub-tape" class="nav-sub-link">🖊 ラインテープ</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h1 class="doc-title">運営マニュアル</h1>
+
+    <!-- 1. 企画 などの各セクションのコンテンツ（<div id="section-0">など）をすべてここに貼り付けます -->
+    <div id="section-0">
+<div class="section-header" style="background: linear-gradient(135deg, #0f2350 0%, #1a3a6e 100%);">
+        <div class="section-badge">📆</div>
+        <h2>年間スケジュール</h2>
+      </div>
+      <div class="card" style="padding: 0; overflow: hidden;">
+        <table style="margin: 0;">
+          <thead>
+            <tr>
+              <th style="width: 30%;">時期</th>
+              <th>大会名</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>6月</td>
+              <td>新人戦</td>
+            </tr>
+            <tr>
+              <td>8月</td>
+              <td>蓋ノ陣</td>
+            </tr>
+            <tr>
+              <td>9月</td>
+              <td>全日本大学キャップ野球選手権</td>
+            </tr>
+            <tr>
+              <td>10月〜11月</td>
+              <td>関西シャッフル大会</td>
+            </tr>
+            <tr>
+              <td>1月</td>
+              <td>新年大会</td>
+            </tr>
+            <tr>
+              <td>2月</td>
+              <td>東西統一蓋祭</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <div id="section-1">
+      <div class="section-header">
+        <div class="section-badge">1</div>
+        <h2>企画</h2>
+      </div>
+
+      <h3>📅 会議について</h3>
+      <div class="card">
+        <ul>
+          <li><strong>企画会議:</strong> 大会書類の不備確認、大会形式の決定・確認。</li>
+          <li><strong>直前会議:</strong> 当日の持ち物・注意点の共有</li>
+          <li><strong>振り返り会議:</strong> アンケート結果の共有と、今後の運営への活用検討</li>
+        </ul>
+      </div>
+
+      <h3>🎲 抽選</h3>
+      <div class="card">
+        <ul>
+          <li>全チームのブロック分け抽選や、シャッフル大会のαリーグのドラフト抽選を行う。</li>
+          <li>
+            <strong>東西統一蓋祭のみ：</strong>同一チームが同じブロックに割り振られないよう注意すること。
+          </li>
+          <li>
+            <strong>シャッフル大会のβリーグ：</strong>抽選後、運営側で割り振りを行う。
+          </li>
+        </ul>
+      </div>
+
+      <div id="sub-gym-secure">
+        <h3>🏟 体育館の確保と選び方</h3>
+
+        <p>現在の予約可能体育館の一覧は<a
+            href="https://docs.google.com/spreadsheets/d/1_HQZ9SQZh038h_E9cu0N_kBqIxg4Wn7Hds4rOdLZgeM/edit?gid=0#gid=0"
+            target="_brank">こちら</a>。</p>
+
+        <section id="gym-section"
+          style="max-width: 1000px; margin: 40px auto; padding: 20px; font-family: 'Helvetica Neue', Arial, sans-serif; color: #333;">
+
+          <h2
+            style="border-left: 5px solid #2b5797; padding-left: 15px; margin-bottom: 25px; color: #1e1e2e; font-size: 1.5rem;">
+            利用体育館一覧</h2>
+
+          <div style="margin-bottom: 30px;">
+            <div
+              style="box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; border: 1px solid #ddd;">
+              <iframe src="https://www.google.com/maps/d/embed?mid=1AGQevU6AmwRrImudHvN_MlocHEd3UgE&ehbc=2E312F"
+                width="100%" height="500" style="border:0;"></iframe>
+            </div>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 8px;">※地図上のピンをクリックすると詳細が表示されます。</p>
+          </div>
+
+          <div
+            style="background: #ffffff; padding: 20px; border-radius: 12px; border: 1px solid #eee; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+            <h3 style="margin-top: 0; margin-bottom: 20px; font-size: 1.1rem; color: #555;">条件で絞り込む</h3>
+
+            <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+            <div style="overflow-x: auto;">
+              <table id="gymTable" class="display" style="width:100%">
+                <thead>
+                  <tr style="background: #f8f9fa;">
+                    <th>体育館名</th>
+                    <th>エリア</th>
+                    <th>メイン広さ</th>
+                    <th>サブ広さ</th>
+                    <th>アクセス</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>島津アリーナ京都</td>
+                    <td>京都市</td>
+                    <td>６面</td>
+                    <td>２面</td>
+                    <td><a href="http://kyoto-furitutaiikukan.jp/24accesssyuuhen.html"
+                        style="color: #2b5797; text-decoration: none;">HP</a></td>
+                  </tr>
+                  <tr>
+                    <td>向日市民体育館</td>
+                    <td>向日市</td>
+                    <td>６面</td>
+                    <td>２面</td>
+                    <td><a href="https://mukosca.jp/pages/204/" style="color: #2b5797; text-decoration: none;">HP</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>山城総合運動公園体育館</td>
+                    <td>宇治市</td>
+                    <td>６面</td>
+                    <td>２面</td>
+                    <td><a href="https://www.kyoto-park.jp/access/"
+                        style="color: #2b5797; text-decoration: none;">HP</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>野洲市総合体育館</td>
+                    <td>野洲市</td>
+                    <td>６面</td>
+                    <td>２面</td>
+                    <td><a href="https://yasu-bs.jp/gymnasium/#access"
+                        style="color: #2b5797; text-decoration: none;">HP</a></td>
+                  </tr>
+                  <tr>
+                    <td>おおきにアリーナ舞洲</td>
+                    <td>大阪市</td>
+                    <td>８面</td>
+                    <td>２面</td>
+                    <td><a href="https://human-arena.com/access/" style="color: #2b5797; text-decoration: none;">HP</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>八尾市立総合体育館</td>
+                    <td>八尾市</td>
+                    <td>５面</td>
+                    <td>２面</td>
+                    <td><a href="http://yao-taisin.com/kaku-shisetu-soutai.html"
+                        style="color: #2b5797; text-decoration: none;">HP</a></td>
+                  </tr>
+                  <tr>
+                    <td>東大阪アリーナ</td>
+                    <td>東大阪市</td>
+                    <td>８面</td>
+                    <td>２面</td>
+                    <td><a href="https://www.hos-arena.com/access/"
+                        style="color: #2b5797; text-decoration: none;">HP</a></td>
+                  </tr>
+                  <tr>
+                    <td>はびきのコロセアム</td>
+                    <td>羽曳野市</td>
+                    <td>６面</td>
+                    <td>２面</td>
+                    <td><a href="https://hc-colosseum.jp/access/" style="color: #2b5797; text-decoration: none;">HP</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>大浜だいしんアリーナ</td>
+                    <td>堺市</td>
+                    <td>６面</td>
+                    <td>２面</td>
+                    <td><a href="https://ohama-arena-budokan.com/access/"
+                        style="color: #2b5797; text-decoration: none;">HP</a></td>
+                  </tr>
+                  <tr>
+                    <td>グリーンアリーナ神戸</td>
+                    <td>神戸市</td>
+                    <td>６面</td>
+                    <td>２面</td>
+                    <td><a href="https://www.kobe-park.or.jp/sougou/access/"
+                        style="color: #2b5797; text-decoration: none;">HP</a></td>
+                  </tr>
+                  <tr>
+                    <td>ベイコム総合体育館</td>
+                    <td>尼崎市</td>
+                    <td>６面</td>
+                    <td>２面</td>
+                    <td><a href="https://www.aspf.or.jp/park/access.html#gsc.tab=0"
+                        style="color: #2b5797; text-decoration: none;">HP</a></td>
+                  </tr>
+                  <tr>
+                    <td>和歌山ビッグホエール</td>
+                    <td>大阪市</td>
+                    <td>８面</td>
+                    <td>２面</td>
+                    <td><a href="https://hc-colosseum.jp/access/" style="color: #2b5797; text-decoration: none;">HP</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>和歌山ビッグウェーブ</td>
+                    <td>大阪市</td>
+                    <td>８面</td>
+                    <td>２面</td>
+                    <td><a href="https://hc-colosseum.jp/access/" style="color: #2b5797; text-decoration: none;">HP</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+        <script>
+          $(document).ready(function () {
+            $('#gymTable').DataTable({
+              // 日本語化設定
+              language: {
+                url: "https://cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json"
+              },
+              // デフォルトの並び順（0列目：体育館名を昇順）
+              order: [[0, 'asc']],
+              // ページあたりの表示件数
+              pageLength: 10,
+              // 検索・フィルタ機能を有効化
+              searching: true,
+              // モバイル等で表が崩れないように調整
+              autoWidth: false
+            });
+          });
+        </script>
+        <h4>📐 面積計算</h4>
+        <div class="highlight-box">
+          <p style="margin:0 0 0.5rem 0;">
+            ⚽ 設営する場合、<strong>17×17m 程度</strong>がキャップ野球コート1面の目安です。
+          </p>
+          <p style="margin:0; font-size: 0.9rem; color: #555;">
+            💡 例：向日市民体育館（50×40m）の場合 → <strong>6面設営可能</strong>
+          </p>
+        </div>
+
+        <h4>🔍 体育館選びの確認項目</h4>
+        <div class="info-grid">
+          <div class="info-grid-item">
+            <span>
+              <strong>値段(施設使用料のみ、設備料は別途加算)</strong><br>
+              <small style="color:#555;">
+                1日12時間の目安：<br>
+                4面：<strong>40,000〜60,000円</strong><br>
+                6面：<strong>70,000〜100,000円</strong><br>
+              </small>
+            </span>
+          </div>
+          <div class="info-grid-item">
+            <span><strong>防球フェンス・椅子の数</strong><br><small style="color:#555;">設置台数・サイズを確認<br>
+                1面当たり：<strong>12～16枚</strong><br>机：１～２つ<br>椅子：２～４脚
+              </small>
+              　　　</span>
+          </div>
+          <div class="info-grid-item">
+            <span><strong>使用できるテープの指定</strong><br><small style="color:#555;">養生テープorアストラインテープ
+                <br>一部売っているテープを使用するようにお願いされる体育館もあるので、支払いの際には注意。<br><strong>※神戸グリーンアリーナではテープは無料で使えます。</strong></small></span>
+          </div>
+          <div class="info-grid-item">
+            <span><strong>冷暖房・コンセント・マイク</strong><br><small
+                style="color:#555;">設備の有無を確認<br><strong>特に冷暖房は値段設定に注意！</strong></small></span>
+          </div>
+          <div class="info-grid-item">
+            <span><strong>飲食関連のルール</strong><br><small style="color:#555;">飲食持込可否など</small></span>
+          </div>
+          <div class="info-grid-item">
+            <span><strong>撮影・二次利用の可否</strong><br><small style="color:#555;">動画・写真の公開制限</small></span>
+          </div>
+          <div class="info-grid-item">
+            <span><strong>フェンス等の直置き可否</strong><br><small style="color:#555;">床に直接おいてよいか、シートを敷く必要があるのか</small></span>
+          </div>
+          <div class="info-grid-item">
+            <span><strong>床の見やすさ</strong><br><small style="color:#555;">ライン・色の確認</small></span>
+          </div>
+        </div>
+      </div>
+      <h3>🏢 体育館の手配（電話・申込・打ち合わせ）</h3>
+
+      <h4>【電話での空き状況確認・予約】</h4>
+      <div class="alert-box info">
+        <span class="alert-title info-title">📞 電話対応の注意点</span>
+        <ul style="margin:0.3rem 0 0 0;">
+          <li>担当者によっては門前払いされることもありますが、忙しい時間帯や施設担当者が不在の場合が多いため、<strong>日を改めて再チャレンジ</strong>するのも手です。</li>
+          <li>以下の時間帯は担当者が不在の可能性があるため、避けることを推奨します。
+            <ul>
+              <li>朝の早い時間</li>
+              <li>正午付近</li>
+              <li>夕方</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th width="30%">状況</th>
+            <th>トークスクリプト</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>最初の問い合わせ</td>
+            <td>「体育館の予約を考えている者なのですが、○○月の空き状況を教えていただけますでしょうか？」</td>
+          </tr>
+          <tr>
+            <td>空きがあり、持ち帰る場合</td>
+            <td>「ありがとうございます。一度こちらで持ち帰って検討させていただきます。」</td>
+          </tr>
+          <tr>
+            <td>空きがあり、予約する場合</td>
+            <td>「ありがとうございます。それでは○○日で予約させていただきたいです。」</td>
+          </tr>
+          <tr>
+            <td>空きがない場合</td>
+            <td>「承知いたしました。お調べ頂きありがとうございました。」</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="alert-box info">
+        <span class="alert-title info-title">ℹ️ 【申込】について</span>
+        メールで送付できるケースと、現地へ足を運ぶ必要があるケースがあるため必ず確認してください。
+      </div>
+
+      <h4>【打ち合わせ】</h4>
+      <p>本番のおよそ1か月前に現地（体育館）で担当者と実施します。</p>
+      <ul>
+        <li><strong>共有事項:</strong> 使用する備品、開場・閉場時間、先方からの注意点など。</li>
+        <li><strong>備考:</strong> このタイミングで施設利用料を支払う場合もあります。</li>
+      </ul>
+
+      <h3>📄 書類作成</h3>
+      <p>基本的には昨年度のコピーで問題ありませんが、必ず以下の点を確認・修正してください。</p>
+      <ul>
+        　<li><strong>作成場所:</strong>共有ドライブ「<a href="https://drive.google.com/drive/folders/0AN_djvDWVPObUk9PVA"
+            target="_brank">関西企画委員会</a>」内（新規作成、または昨年度フォルダからコピーして移動）。</li>
+        　<li><strong>最新化:</strong> リンク先、会場、時間、ルールなどは最新版か確認する。</li>
+        　<li><strong>ロゴ:</strong> ヘッダーにJCBAのロゴ（<a
+            href="https://drive.google.com/uc?export=download&id=1dYxh-t-qk1jaXZftjTJUbfcLkfheT3fy">クリックでダウンロード</a>）を挿入する。
+        </li>
+        　<li><strong>レイアウト:</strong> 改行や横幅の調整は慎重に（閲覧環境によって表示が異なるため）。</li>
+      </ul>
+
+      <div class="alert-box">
+        　<span class="alert-title">⚠️ 共通注意事項</span>
+        時折更新が入るため、内容は必ず目視確認してください。
+      </div>
+      <div class="alert-box" style="background-color:#fce4ec; border-left-color:#e91e63;">
+        　<span class="alert-title" style="color:#c62828;">📄 PDF化について</span>
+        　　<strong>公開書類はすべてPDF化してから発表・配布してください。</strong>
+      </div>
+
+      <h4>📋 作成書類一覧</h4>
+      <p style="font-size:0.9rem; color:#666; margin-bottom:1rem;">
+        　<span class="badge badge-public">公開</span> … 対外向け・PDF化必須　
+        　<span class="badge badge-ops">運営</span> … 内部用・スプレッドシートのまま可
+      </p>
+
+      <!-- 公開書類（既存テーブルをそのまま） -->
+      <table class="doc-list-table">
+        <thead>
+          <tr>
+            <th>書類名</th>
+            <th>種別</th>
+            <th>主な記載内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>要項</td>
+            <td><span class="badge badge-public">公開</span></td>
+            <td>日時・集合時刻・場所・参加費・申込方法・申込期限・大会ルール・諸注意・会場アクセス・近辺の医療機関</td>
+          </tr>
+          <tr>
+            <td>規約</td>
+            <td><span class="badge badge-public">公開</span></td>
+            <td>参加規約・参加費の振込先・禁止行為・注意事項・参加取り消しの案内</td>
+          </tr>
+          <tr>
+            <td>参加フォーム</td>
+            <td><span class="badge badge-public">公開</span></td>
+            <td>チーム代表者名・チーム名・メンバー・メールアドレス・人数・オープンチャットリンク・参加費振込先・大会要項＆規約のリンク</td>
+          </tr>
+          <tr>
+            <td>保護者同意書</td>
+            <td><span class="badge badge-public">公開</span></td>
+            <td>18歳未満の選手は必ず提出させること</td>
+          </tr>
+          <tr>
+            <td>名簿</td>
+            <td><span class="badge badge-public">公開</span></td>
+            <td>参加フォームの結果をもとに作成。フルネームで記載。公開時はpdf化すること。</td>
+          </tr>
+          <tr>
+            <td>大会形式（規定）</td>
+            <td><span class="badge badge-public">公開</span></td>
+            <td>大会形式・予選/決勝イニング規定・タイブレーク設定・順位決定方法・勝敗決定方法・トーナメント表</td>
+          </tr>
+          <tr>
+            <td>振込確認フォーム</td>
+            <td><span class="badge badge-public">公開</span></td>
+            <td>振込名義・人数・振込額</td>
+          </tr>
+          <tr>
+            <td>試合審判表</td>
+            <td><span class="badge badge-public">公開</span></td>
+            <td>各チームのコート割・試合/審判の担当・時間帯（スプレッドシートで作成）</td>
+          </tr>
+          <tr>
+            <td>参加後アンケートフォーム</td>
+            <td><span class="badge badge-public">公開</span></td>
+            <td>大会形式・体育館の立地と見やすさ・運営の動き・その他意見についての満足度</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 運営書類（既存テーブルをそのまま） -->
+      <table class="doc-list-table">
+        <thead>
+          <tr>
+            <th>書類名</th>
+            <th>種別</th>
+            <th>主な記載内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>名簿（フルネーム）</td>
+            <td><span class="badge badge-ops">運営</span></td>
+            <td>総務委員会に確認をとること。表記ゆれ・JCBAの登録の有無を確認してもらう。</td>
+          </tr>
+          <tr>
+            <td>対戦表</td>
+            <td><span class="badge badge-ops">運営</span></td>
+            <td>スコア・勝ち点・得点・失点・得失点差・順位（スプレッドシートで作成）</td>
+          </tr>
+          <tr>
+            <td><a
+                href="https://docs.google.com/spreadsheets/d/1GEfJQ01sGK0BvODuqv2VLc4JC3943dVzu9lP4pJEIlo/edit?usp=drive_link">動画管理シート</a>
+            </td>
+            <td><span class="badge badge-ops">運営</span></td>
+            <td>SDカードごとの試合割当・担当者・アップロード完了チェックボックス（スプレッドシートで作成）</td>
+          </tr>
+          　<tr>
+            <td>大会作成（<a href="https://cap-scorebook.com/">スコアブック</a>）</td>
+            <td><span class="badge badge-ops">運営</span></td>
+            <td>各大会ごとに作成・編集。参加チーム名がない場合、新規作成する必要がある。</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div id="sub-form-system">
+        <div class="card" style="margin-bottom:1rem;">
+          <strong>📌 各書類の補足事項（作り方・運用ルール）</strong>
+        </div>
+
+        <h4>📝 参加申込フォームの必須項目</h4>
+        <div class="card">
+          <ul style="margin:0;">
+            <li>要項・規約へのリンク</li>
+            <li>参加チーム名（公序良俗に反しないもの）</li>
+            <li>参加者数</li>
+            <li>参加者全員の氏名（一人ごとに改行）</li>
+            <li>参加希望日程</li>
+            <li>OC（オープンチャット）参加確認ボタン</li>
+            <li>要項・規約への同意ボタン</li>
+            <li>備考欄</li>
+          </ul>
+        </div>
+
+        <h4>💳 振込先情報（フォーム／規約に反映）</h4>
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <table style="margin: 0;">
+            <thead>
+              <tr>
+                <th style="width: 20%;">地域</th>
+                <th>振込先</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>西日本</strong></td>
+                <td>
+                  GMOあおぞらネット銀行　法人第二営業部<br>
+                  普通　<strong>1514484</strong>　日本キャップ野球協会関西
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="alert-box">
+          <span class="alert-title">⚠️ 振込に関する注意書き（フォームに必ず記載）</span>
+          <ul style="margin: 0.3rem 0 0 0;">
+            <li>振込名義は<strong>項目＋チーム名</strong>にすること</li>
+            <li>振込手数料は<strong>自己負担</strong>であること</li>
+          </ul>
+        </div>
+
+        <div class="doc-image-container">
+          <img src="https://drive.google.com/thumbnail?authuser=0&sz=w1000&id=1XKicjr6saaUu_N93PimmgcR6PTLUzeLB"
+            alt="フォーム作成とシステム設定（参考画像）" class="doc-image">
+          <small class="image-caption">フォーム・振込注意書き等の参考</small>
+        </div>
+
+        <h4>💬 オープンチャット（OC）の作成設定</h4>
+        <div class="card">
+          <ul style="margin:0;">
+            <li>作成時に「<strong>検索を許可</strong>」欄の<strong>チェックボックスを外す</strong>こと。</li>
+            <li>メンバーを<strong>全員入れる</strong>こと。</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 名簿関連：公開名簿ルール＋Excel時短を同じ塊に -->
+      <div class="card" style="margin-bottom:1rem;">
+        <strong>📝 名簿（公開）の作成ルール</strong>
+        <ul style="margin-top:0.7rem;">
+          <li>複数列に分けて記載し、ある程度高さが揃うようにレイアウトする。</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>🗂 名簿作成 Excel 時短テクニック</strong>
+        <ul style="margin-top:0.7rem;">
+          <li>基本的に<strong>フルネーム</strong>です。</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-bottom:1rem;">
+        <strong>🏗 運営用書類（本部・設営）の補足</strong>
+        <ul style="margin-top:0.7rem;">
+          <li>本部席の割り振りやコート設営担当を決定・記載する。</li>
+          <li><strong>設営担当の役割:</strong> 必ずしも運営自身が設営作業をする必要はありません。足りないテープ・ハサミの補充、画角調整、コート寸法の確認などを主に行います。</li>
+        </ul>
+      </div>
+
+      <h3>📝 <a href="https://cap-scorebook.com/">スコアブック</a>作成</h3>
+      <p>大会ごとにチームの作成・編集を行います。<br><strong>大会名、チーム名、タイブレーク設定には十分注意するように。</strong></p>
+
+
+      <h3>🏃 当日の動き</h3>
+      <ul>
+        <li>審判、タイムキーパー、撮影機材のバッテリー等の交換対応</li>
+        <li>開会式・閉会式等の進行</li>
+      </ul>
+    </div>
+
+    <!-- Section 2 -->
+    <div id="section-2">
+      <div class="section-header">
+        <div class="section-badge">2</div>
+        <h2>メール対応</h2>
+      </div>
+      <div class="card">
+        <ul>
+          <li><strong>受信設定:</strong> 設定方法については<a
+              href="https://sites.google.com/capbaseball-jcba.com/workspace/services#h.aotvk1adxs0r">別途リンク参照</a>。</li>
+          <li><strong>文面作成:</strong> 基本的にはAIに添削してもらって問題ありません。</li>
+        </ul>
+        <div class="alert-box">
+          <span class="alert-title">⚠️ 重要</span>
+          送信先（宛先）の間違いには十分に注意してください。
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div id="section-3">
+      <div class="section-header">
+        <div class="section-badge">3</div>
+        <h2>撮影機材について</h2>
+      </div>
+
+      <h3>📹 カメラの基本操作とトラブル対応</h3>
+      <ul>
+        <li>
+          基本的には電源を入れ、一番大きい<strong>「赤い丸のボタン」</strong>を押すだけで録画されます。その他の設定は触らないほうが無難です。
+        </li>
+        <li>詳細な使い方は<a
+            href="https://docs.google.com/presentation/d/1-ESXA_2oOiKJe9gYagzcXioX4GYHDa0gpR4T_DyCpMg/edit?usp=drive_link"
+            target="_brank">別途リンク参照</a>。</li>
+      </ul>
+
+      <div class="alert-box">
+        <span class="alert-title">⚠️ 画面が暗く、録画が停止している場合</span>
+        主に以下の2つの原因が考えられます。可能であれば復旧させるか、本部に確認をとってください。
+        <ul>
+          <li>バッテリー切れ</li>
+          <li>オーバーヒート</li>
+        </ul>
+      </div>
+
+      <h3>🔋 バッテリーとSDカードの取り扱い</h3>
+      <p>格納されている位置と、挿入時の「向き」を事前に把握しておくこと。</p>
+
+      <h3>📂 データの格納場所（PC等で確認する際）</h3>
+      <p>以下のパスを参照してください：</p>
+      <ul>
+        <li>動画: <code>SDカード &gt; PRIVATE &gt; M4ROOT &gt; CLIP</code></li>
+        <li>写真: <code>SDカード &gt; DCIM &gt; (100MSDCFなど)</code></li>
+      </ul>
+
+      <h3>💾 SDカードのフォーマット手順</h3>
+      <p>PCに接続し、SDカードのアイコンを右クリックして「フォーマット」を選択・実行してください。</p>
+
+      <h3>📐 画角</h3>
+      <img src="https://drive.google.com/thumbnail?authuser=0&sz=w1000&id=17Bp73BcvwpL-qvr_G5Fz4FHzcS9-8GtU"
+        alt="マニュアル画像" style="max-width:100%; height:auto;">
+      <small class="image-caption">画角の参考</small>
+
+      <h3>📤 動画・写真の共有方法</h3>
+      <ul>
+        <li>ドライブ内の「<a href="https://drive.google.com/drive/folders/18vsOYsTCgkaJFGwsAiPc7zydUNag7gni?usp=drive_link"
+            target="_brank">写真・動画管理フォルダ</a>」にある、各大会ごとのフォルダに保存してください。</li>
+        <li><strong>推奨:</strong> 動画のファイル名を「1回表」などに変更しておくと管理がスムーズです。</li>
+      </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div id="section-4">
+      <div class="section-header">
+        <div class="section-badge">4</div>
+        <h2>他委員会との連携</h2>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <header><strong>📢 広報委員会</strong></header>
+          <p><strong>動画公開:</strong>&nbsp;大会後2週間以内に動画をアップロードすることが好ましいです。</p>
+        </article>
+
+        <article class="card">
+          <header><strong>🤝 マーケティング委員会</strong></header>
+          <ul>
+            <li><strong>協賛関連:</strong> 大会の協賛関連で、体育館の設営時に連携が必要になる場合があります。</li>
+            <li>イベントのヘルプや大会協賛関連の手伝いが発生する可能性があります。</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <header><strong>👔 理事会</strong></header>
+          <p>
+            <strong>ルール変更:</strong>
+            ルールブックの改訂やルールの変更・修正が入る場合があるため、動向に注意してください。
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <!-- ===== NEW Section 5: ルール・規定・図面 ===== -->
+    <div id="section-5">
+      <div class="section-header" style="background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);">
+        <div class="section-badge">5</div>
+        <h2>ルール・規定・図面</h2>
+      </div>
+
+      <!-- 大会規定 -->
+      <div id="sub-rule-detail">
+        <h3>📏 大会規定</h3>
+
+        <div class="rule-card">
+          <div class="rule-title">⏱ 試合時間・イニング進行ルール</div>
+          <ul class="rule-list">
+            <li>
+              <div class="rule-number">1</div>
+              <div class="rule-content-wrapper">
+                <span class="rule-condition">試合終了<span class="nowrap-block">10分前</span>から</span>
+                <div class="rule-action-group">
+                  <span class="rule-action">次の回へは入らない。</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="rule-number">2</div>
+              <div class="rule-content-wrapper">
+                <span class="rule-condition">終了<span class="nowrap-block">1分前</span>の時点で</span>
+                <div class="rule-action-group">
+                  <span class="rule-action">その打者を<span class="important-text">ラストバッター</span>とする。</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="rule-number">3</div>
+              <div class="rule-content-wrapper">
+                <span class="rule-condition"><span class="nowrap-block">2回表終了</span>時に時間コールド</span>
+                <div class="rule-action-group">
+                  <span class="rule-action"><span class="nowrap-block">2回裏は原則行わない</span>。</span>
+                  <span class="sub-note">※ただし、得失点差が順位に関係する大会では裏まで行います。</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h4>⚖️ タイブレーク・勝敗決定方法</h4>
+      <div class="card">
+        <p>時間コールドで<strong>同点</strong>の場合、タイブレークを行います。</p>
+        <div class="alert-box info" style="margin:0.5rem 0 1rem 0;">
+          <span class="alert-title info-title">🔔 タイブレーク設定</span>
+          <strong>1アウト満塁</strong>からスタートします。
+        </div>
+        <p>それでも勝敗が決まらない場合、以下の優先順位で勝敗を決定します：</p>
+        <ol class="priority-list">
+          <li>「安打数 − 与四死球数」が<strong>多い</strong></li>
+          <li>「塁打数」が<strong>多い</strong></li>
+          <li>「出塁数」が<strong>多い</strong></li>
+          <li>「バッテリーエラー数」が<strong>少ない</strong></li>
+          <li>運営による<strong>抽選</strong></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- コート図作成 -->
+    <div id="sub-court-diagram">
+      <h3>📐 コート図作成</h3>
+      <div class="card">
+        <ul>
+          <li>体育館のHP等から<strong>フロアの大きさ</strong>を把握した上で作成します。</li>
+          <li>コートの向きが把握できれば<strong>細かく作る必要はありません</strong>が、各コートへの<strong>アルファベット振り（A・B・C…）</strong>は確実に行うこと。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+        <ul>
+          <li>テープには幅があるため、以下のことに注意して作成すること。</li>
+          <li><strong>投本間はベース後端からテープのベース側の端までの距離であることに注意！（線上は9.22mより遠い）</strong></li>
+          <li><strong>パスボールライン、アウトラインはベース側とは反対の側まで含めた距離であることに注意！（線上はアウトまたは後逸ではない）</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="padding: 0; overflow: hidden;">
+      <table style="margin: 0;">
+        <thead>
+          <tr>
+            <th style="width: 35%;">項目</th>
+            <th>寸法</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>バッターボックス</td>
+            <td>90cm × 150cm</td>
+          </tr>
+          <tr>
+            <td>マウンド</td>
+            <td>61cm</td>
+          </tr>
+          <tr>
+            <td>アウトライン</td>
+            <td>
+              8mからマウンドまで
+            </td>
+          </tr>
+          <tr>
+            <td>フェンスライン</td>
+            <td>13m</td>
+          </tr>
+          <tr>
+            <td>パスボールライン</td>
+            <td>ベース中央角から255cm</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+    <!-- ===== END Section 5 ===== -->
+
+    <!-- ===== NEW Section 6: 当日運営・備品管理 ===== -->
+    <div id="section-6">
+      <div class="section-header" style="background: linear-gradient(135deg, #4a1942 0%, #7b2d8b 100%);">
+        <div class="section-badge">6</div>
+        <h2>当日運営・備品管理</h2>
+      </div>
+
+      <!-- タイムスケジュール -->
+      <div id="sub-timeschedule">
+        <h3>⏱ タイムスケジュールの目安</h3>
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <table style="margin: 0;">
+            <thead>
+              <tr>
+                <th style="width: 35%;">項目</th>
+                <th>所要時間の目安</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>設営 ＋ 開会式</td>
+                <td><strong>60分</strong></td>
+              </tr>
+              <tr>
+                <td>入場 ＋ アップ（設営なしの場合）</td>
+                <td><strong>30分</strong></td>
+              </tr>
+              <tr>
+                <td>試合時間</td>
+                <td>
+                  1イニング：<strong>20分</strong><br>
+                  <small style="color:#666;">
+                    3イニング → 60分　/　4イニング → 80分
+                  </small>
+                </td>
+              </tr>
+              <tr>
+                <td>休憩時間</td>
+                <td><strong>10～20分</strong></td>
+              </tr>
+              <tr>
+                <td>片付け〜撤収完了</td>
+                <td><strong>45～60分</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="alert-box info">
+          <span class="alert-title info-title">💡 スケジュール作成のコツ</span>
+          試合数・コート数・休憩回数をもとに、上記の目安時間を組み合わせてタイムスケジュールを組み立ててください。
+        </div>
+      </div>
+
+      <!-- ラインテープ -->
+      <div id="sub-tape">
+        <h3>🖊 ラインテープの必要量</h3>
+        <div class="highlight-box">
+          <p style="margin:0; font-size:1rem;">
+            1コートの設営に <strong>1.5〜2巻き（約50m）</strong> が目安となります。
+          </p>
+        </div>
+        <div class="card" style="margin-top:1rem;">
+          <p style="margin:0 0 0.5rem 0; font-weight:bold;">💡 コート数別の必要量の目安</p>
+          <table style="margin:0;">
+            <thead>
+              <tr>
+                <th>コート数</th>
+                <th>必要なテープ量（目安）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>4面</td>
+                <td>6〜8巻き（約300m）</td>
+              </tr>
+              <tr>
+                <td>6面</td>
+                <td>9〜12巻き（約450m）</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.85rem; color:#888; margin: 0.8rem 0 0 0;">
+            ※ 予備も考慮して多めに準備することを推奨します。
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- ===== END Section 6 ===== -->
+  </main>
+
+  <!-- スクリプト群（is:inlineを指定して元のまま動作させます） -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" is:inline></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" is:inline></script>
+
+  <script is:inline>
+    // DataTablesの初期化
+    $(document).ready(function () {
+      $('#gymTable').DataTable({
+        language: {
+          url: "https://cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json"
+        },
+        order: [[0, 'asc']],
+        pageLength: 10,
+        searching: true,
+        autoWidth: false
+      });
+    });
+
+    // 目次のスクロールとアクティブ状態の制御
+    document.querySelectorAll('.nav-link, .nav-sub-link').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const targetId = href.substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            const yOffset = -20;
+            const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    const sections = document.querySelectorAll('[id^="section-"], [id^="sub-"]');
+    const navLinks = document.querySelectorAll('.nav-link, .nav-sub-link');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + entry.target.id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-10% 0px -80% 0px' });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
 </Layout>

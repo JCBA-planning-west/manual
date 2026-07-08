@@ -1,0 +1,26 @@
+name: Check and test the source code
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  test:
+    name: Check the source code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24" 
+          cache: "npm"       
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Astro Check
+        run: npx astro check
+
+      - name: Build test
+        run: npm run build

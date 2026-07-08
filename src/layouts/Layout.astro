@@ -13,9 +13,7 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <!-- 既存のPico CSSを読み込み -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-    <!-- DataTablesのCSSもhead内に移動しておくことを推奨します -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
   </head>
   <body style="">
@@ -24,7 +22,6 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
-  /* ここに提供いただいた <style> 〜 </style> 内のCSSをすべて貼り付けます */
   :root {
     --primary-color: #0f2350;
     --accent-color: #4facfe;

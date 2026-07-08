@@ -1,0 +1,44 @@
+---
+// 体育館の動的テーブルコンポーネント
+---
+<div class="table-container">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <div style="overflow-x: auto;">
+    <table id="gymTable" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>体育館名</th><th>エリア</th><th>メイン広さ</th><th>サブ広さ</th><th>アクセス</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>島津アリーナ京都</td><td>京都市</td><td>６面</td><td>２面</td><td><a href="http://kyoto-furitutaiikukan.jp/24accesssyuuhen.html" target="_blank">HP</a></td></tr>
+        <tr><td>向日市民体育館</td><td>向日市</td><td>６面</td><td>２面</td><td><a href="https://mukosca.jp/pages/204/" target="_blank">HP</a></td></tr>
+        <tr><td>山城総合運動公園体育館</td><td>宇治市</td><td>６面</td><td>２面</td><td><a href="https://www.kyoto-park.jp/access/" target="_blank">HP</a></td></tr>
+        <tr><td>野洲市総合体育館</td><td>野洲市</td><td>６面</td><td>２面</td><td><a href="https://yasu-bs.jp/gymnasium/#access" target="_blank">HP</a></td></tr>
+        <tr><td>おおきにアリーナ舞洲</td><td>大阪市</td><td>８面</td><td>２面</td><td><a href="https://human-arena.com/access/" target="_blank">HP</a></td></tr>
+        <tr><td>八尾市立総合体育館</td><td>八尾市</td><td>５面</td><td>２面</td><td><a href="http://yao-taisin.com/kaku-shisetu-soutai.html" target="_blank">HP</a></td></tr>
+        <tr><td>東大阪アリーナ</td><td>東大阪市</td><td>８面</td><td>２面</td><td><a href="https://www.hos-arena.com/access/" target="_blank">HP</a></td></tr>
+        <tr><td>はびきのコロセアム</td><td>羽曳野市</td><td>６面</td><td>２面</td><td><a href="https://hc-colosseum.jp/access/" target="_blank">HP</a></td></tr>
+        <tr><td>大浜だいしんアリーナ</td><td>堺市</td><td>６面</td><td>２面</td><td><a href="https://ohama-arena-budokan.com/access/" target="_blank">HP</a></td></tr>
+        <tr><td>グリーンアリーナ神戸</td><td>神戸市</td><td>６面</td><td>２面</td><td><a href="https://www.kobe-park.or.jp/sougou/access/" target="_blank">HP</a></td></tr>
+        <tr><td>ベイコム総合体育館</td><td>尼崎市</td><td>６面</td><td>２面</td><td><a href="https://www.aspf.or.jp/park/access.html#gsc.tab=0" target="_blank">HP</a></td></tr>
+        <tr><td>和歌山ビッグホエール</td><td>大阪市</td><td>８面</td><td>２面</td><td><a href="https://hc-colosseum.jp/access/" target="_blank">HP</a></td></tr>
+        <tr><td>和歌山ビッグウェーブ</td><td>大阪市</td><td>８面</td><td>２面</td><td><a href="https://hc-colosseum.jp/access/" target="_blank">HP</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script is:inline src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script is:inline src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script is:inline>
+  $(document).ready(function () {
+    $('#gymTable').DataTable({
+      language: { url: "https://cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json" },
+      order: [[0, 'asc']],
+      pageLength: 10,
+      searching: true,
+      autoWidth: false
+    });
+  });
+</script>

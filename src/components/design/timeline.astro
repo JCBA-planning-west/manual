@@ -1,0 +1,39 @@
+---
+---
+<ul class="timeline">
+  <slot />
+</ul>
+
+<style is:global>
+  .timeline {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  .timeline li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed #e0e0e0;
+  }
+  .timeline li:last-child {
+    border-bottom: none;
+  }
+  .timeline-badge {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.82rem;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 80px;
+    text-align: center;
+  }
+  .timeline-badge.accent {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+  }
+</style>

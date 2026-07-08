@@ -1,0 +1,102 @@
+---
+// 必要に応じてPropsなどを受け取る
+---
+<nav class="sidebar">
+    <h2>📑 目次</h2>
+    <a href="#section-0" class="nav-link">📆 年間スケジュール</a>
+    <a href="#section-1" class="nav-link">1. 企画</a>
+    <a href="#sub-gym-secure" class="nav-sub-link">🏟 体育館の確保と選び方</a>
+    <a href="#sub-form-system" class="nav-sub-link">📋 書類作成（フォーム/振込/OC）</a>
+    <a href="#section-2" class="nav-link">2. メール対応</a>
+    <a href="#section-3" class="nav-link">3. 撮影機材</a>
+    <a href="#section-4" class="nav-link">4. 他委員会連携</a>
+    <hr class="nav-divider">
+    <a href="#section-5" class="nav-link">5. ルール・規定・図面</a>
+    <a href="#sub-rule-detail" class="nav-sub-link">📏 大会規定</a>
+    <a href="#sub-court-diagram" class="nav-sub-link">📐 コート図作成</a>
+    <a href="#section-6" class="nav-link">6. 当日運営・備品管理</a>
+    <a href="#sub-timeschedule" class="nav-sub-link">⏱ タイムスケジュール</a>
+    <a href="#sub-tape" class="nav-sub-link">🖊 ラインテープ</a>
+</nav>
+
+<style>
+  .sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--primary-color);
+    color: white;
+    position: fixed;
+    height: 100vh;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 1000;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+
+  .sidebar h2 {
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+  }
+
+  .nav-link {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 0.6rem 0.5rem;
+    margin-bottom: 0.1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    font-size: 0.9rem;
+    white-space: nowrap !important;
+  }
+
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav-link.active {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+
+  .nav-sub-link {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    color: #b0c4de;
+    text-decoration: none;
+    padding: 0.4rem 0.5rem 0.4rem 1.3rem;
+    margin-bottom: 0.05rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    font-size: 0.82rem;
+    white-space: nowrap !important;
+    border-left: 2px solid rgba(79, 172, 254, 0.3);
+    margin-left: 0.5rem;
+  }
+
+  .nav-sub-link:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin: 0.6rem 0;
+  }
+</style>

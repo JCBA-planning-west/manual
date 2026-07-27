@@ -1,0 +1,42 @@
+---
+interface Props {
+  type?: 'default' | 'info' | 'success';
+  title?: string;
+}
+
+const { type = 'default', title } = Astro.props;
+---
+<div class={`alert-box ${type}`}>
+  {title && <span class={`alert-title ${type}-title`}>{title}</span>}
+  <slot />
+</div>
+
+<style is:global>
+  .alert-box {
+    background-color: #fff8e1;
+    border-left: 5px solid #ffc107;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+  }
+  .alert-box.info {
+    background-color: #e3f2fd;
+    border-left-color: #2196f3;
+  }
+  .alert-box.success {
+    background-color: #e8f5e9;
+    border-left-color: #4caf50;
+  }
+  .alert-title {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #d32f2f;
+  }
+  .info-title {
+    color: #1976d2;
+  }
+  .success-title {
+    color: #2e7d32;
+  }
+</style>

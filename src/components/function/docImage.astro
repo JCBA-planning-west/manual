@@ -1,0 +1,32 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+const { src, alt, caption } = Astro.props;
+---
+<div class="doc-image-container">
+  <img src={src} alt={alt} class="doc-image" />
+  {caption && <small class="image-caption">{caption}</small>}
+</div>
+
+<style is:global>
+  .doc-image-container {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .doc-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+  }
+  .image-caption {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+</style>

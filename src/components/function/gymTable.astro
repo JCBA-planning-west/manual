@@ -32,39 +32,38 @@
 <script is:inline src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script is:inline src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 
-<script>
-  if (window.$ && window.$.fn && window.$.fn.dataTable) {
-    window.$.fn.dataTable.ext.errMode = 'none';
-  }
+<script is:inline>
+  (function () {
+    const _originalAlert = window.alert;
+    window.alert = function (message) {
+      if (message && typeof message === 'string' && message.indexOf('DataTables warning') !== -1) {
+        console.warn('DataTables warning suppressed:', message);
+        return;
+      }
+      _originalAlert.apply(window, arguments);
+    };
 
-  function initGymTable() {
-    const $ = window.$;
-    if (!$ || !$.fn.DataTable) return;
-
-    const tableId = '#gymTable';
-    const $table = $(tableId);
-
-    if ($table.length === 0) return;
-
-    if ($.fn.DataTable.isDataTable(tableId)) {
-      $table.DataTable().clear().destroy();
+    if ($.fn && $.fn.dataTable) {
+      $.fn.dataTable.ext.errMode = 'none';
     }
 
-    $table.DataTable({
-      retrieve: true,
-      destroy: true,
-      language: { url: "https://cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json" },
-      order: [[0, 'asc']],
-      pageLength: 10,
-      searching: true,
-      autoWidth: false
+    $(document).ready(function () {
+      const $table = $('#gymTable');
+      if ($table.length === 0) return;
+
+      if ($.fn.DataTable.isDataTable('#gymTable')) {
+        $table.DataTable().destroy();
+      }
+
+      $table.DataTable({
+        retrieve: true,
+        destroy: true,
+        language: { url: "https://cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json" },
+        order: [[0, 'asc']],
+        pageLength: 10,
+        searching: true,
+        autoWidth: false
+      });
     });
-  }
-
-  document.addEventListener('DOMContentLoaded', initGymTable);
-  document.addEventListener('astro:page-load', initGymTable);
-
-  if (document.readyState !== 'loading') {
-    initGymTable();
-  }
+  })();
 </script>
